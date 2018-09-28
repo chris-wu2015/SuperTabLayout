@@ -2054,6 +2054,11 @@ public class SuperTabLayout extends HorizontalScrollView {
             }
         }
 
+        @TabIndicatorWidthMode
+        int getIndicatorWidthMode() {
+            return indicatorWidthMode;
+        }
+
         void setIndicatorWidthMode(@TabIndicatorWidthMode int mode) {
             if (indicatorWidthMode != mode) {
                 indicatorWidthMode = mode;
@@ -2357,7 +2362,7 @@ public class SuperTabLayout extends HorizontalScrollView {
                 rectF.right = mIndicatorRight;
                 rectF.bottom = indicatorBottom;
 
-                if (rectF.width() < getTabMinWidth()) {
+                if (rectF.width() < getTabMinWidth() && mTabStrip.getIndicatorWidthMode() != INDICATOR_WIDTH_EXACTLY) {
                     rectF.left = rectF.left - (getTabMinWidth() - rectF.width()) / 2;
                     rectF.right = rectF.left + getTabMinWidth();
                 }
