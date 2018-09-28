@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SuperTabLayout">
+        <attr name="indicatorWidthMode">
+            <enum name="match" value="0" />
+            <enum name="wrap" value="1" />
+            <enum name="exactly" value="2" />
+        </attr>
+        <attr name="indicatorWidth" format="dimension" />
+        <attr name="indicatorHeightMode">
+            <enum name="match" value="0" />
+            <enum name="wrap" value="1" />
+            <enum name="exactly" value="2" />
+        </attr>
+        <attr name="indicatorRadius" format="dimension" />
+        <attr name="tabIndicatorColor" />
+        <attr name="tabIndicatorHeight" />
+        <attr name="tabContentStart" />
+        <attr name="tabBackground" />
+        <attr name="tabMode" />
+
+        <attr name="tabGravity" />
+
+        <attr name="tabMinWidth" />
+        <attr name="tabMaxWidth" />
+        <attr name="tabTextAppearance" />
+        <attr name="tabTextColor" />
+        <attr name="tabSelectedTextColor" />
+        <attr name="tabPaddingStart" />
+        <attr name="tabPaddingTop" />
+        <attr name="tabPaddingEnd" />
+        <attr name="tabPaddingBottom" />
+        <attr name="tabPadding" />
+
+        <attr name="tabDivider" format="reference" />
+        <attr name="tabShowDividers">
+            <flag name="none" value="0" />
+            <flag name="beginning" value="1" />
+            <flag name="middle" value="2" />
+            <flag name="end" value="4" />
+        </attr>
+        <!-- Size of padding on either end of a divider. -->
+        <attr name="tabDividerPadding" format="dimension" />
+        <attr name="tabTextIconGap" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="TabItem">
+        <attr name="android:text" />
+        <attr name="android:icon" />
+        <attr name="android:layout" />
+    </declare-styleable>
+</resources>
