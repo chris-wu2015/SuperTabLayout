@@ -2225,9 +2225,13 @@ public class SuperTabLayout extends HorizontalScrollView {
                         // Draw the selection partway between the tabs
                         View nextTitle = getChildAt(mSelectedPosition + 1);
                         int nextLeft = nextTitle.getLeft();
+                        int nextRight = nextTitle.getRight();
+                        int nextMiddle = (nextTitle.getRight() - nextLeft) / 2;
+                        int halfIndicator = mTabIndicatorWidth / 2;
+                        nextLeft = nextLeft + nextMiddle - halfIndicator;
                         left = (int) (mSelectionOffset * nextLeft
                                 + (1.0f - mSelectionOffset) * left);
-                        int nextRight = nextTitle.getRight();
+                        nextRight = nextRight - middle + halfIndicator;
                         right = (int) (mSelectionOffset * nextRight
                                 + (1.0f - mSelectionOffset) * right);
                     }
